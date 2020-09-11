@@ -126,8 +126,8 @@ def TECHNIQUE(time_mini_section):
         countdown_mini_section(time_mini_section)
 
 def TRANSCRIBING(time_section):
-    python_button = driver.find_elements_by_xpath("//*[@id='start-stop']")[0]
-    python_button.click
+    #python_button = driver.find_elements_by_xpath("//*[@id='start-stop']")[0]
+    #python_button.click
     print("TRANSCRIBING section")
     print("Download songs that you want to transcribe and put them into the software called 'transcribe'!")
     os.system('transcribe')
