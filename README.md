@@ -18,7 +18,7 @@ The Practice areas are broke down into:
 
 - Improvisation - if applicable gets added to the end of the routine.
 
-The idea is borrowed from Justin - You can check out his article here -> ![Intermediate-Practice-Routine](https://www.justinguitar.com/guitar-lessons/intermediate-practice-routine-pc-502)
+The idea is borrowed from Justin - You can check out his article here -> [Intermediate-Practice-Routine](https://www.justinguitar.com/guitar-lessons/intermediate-practice-routine-pc-502)
 
 ## Requirements:
 

@@ -11,7 +11,7 @@ def main():
     time_total = declaring_time_total()
     time_section = calculate_time_section(time_total)
     time_mini_section = calculate_time_mini_section(time_section)
-    time_theory_section = declaring_tile_total()/2
+    time_theory_section = time_total / 2
     metronome()
     TECHNIQUE(time_mini_section)
     TRANSCRIBING(time_section)
@@ -77,11 +77,11 @@ def wants_improvisation():
         return False
 
 def theory_level():
-    theory_level = 1
-    theory_level = 1 = int(input("""What is your level in theory knowledge from 1 to 10?(default - '1'"""))
-    if theory_level <=5:
+    theory_level_int = 1
+    theory_level_int = int(input("""What is your level in theory knowledge from 1 to 10?(default - '1'"""))
+    if theory_level_int <=5:
         return True
-    elif theory_level >=5:
+    elif theory_level_int >=5:
         return False
     else:
         return False
@@ -90,10 +90,10 @@ def metronome():
     driver.get("https://metronom.us/en/")
     python_button = driver.find_elements_by_xpath("//*[@id='start-stop']")[0]
     python_button.click()
-    create_and_switchTab()
+    #create_and_switchTab()
 
-def create_and_switchTab():
-    driver.switch_to.new_window('tab')
+#def create_and_switchTab():
+    #driver.switch_to.new_window('tab')
 
 def TECHNIQUE(time_mini_section):
     # Finger Gym
@@ -143,16 +143,17 @@ def  REPERTOIRE(time_section):
           "- Band Songs - Songs that you should learn intensely and to learn the whole song, not only some bits! \n"
           "- Advanced Songs - When you get to advanced level, you should stop learning BBQ songs and head over into some advanced stuff!")
     countdown_section(time_section)
-def KNOWLEDGE(time_mini_section):
+def KNOWLEDGE(time_section):
     print("It's time to get more knowledge/theory practically : ")
     print("This is supposed to be practical practice of music theory (sounds weird, I know!) \n"
           "So in this section, you should always be having your guitar equipped")
+    global theory_level
     theory_level = theory_level()
     if theory_level == True:
         print("""Beginners should focus on Basic Rhythm, Musical time signatures, Localising notes on the neck, Intervals between notes
                 It's in some way pointless for me to explain everything, if you don't know what these abilities are, you should google or watch videos about them on youtube! If you know what they mean, then it's still pointless for me to give further explanation REMEMBER TO MAKE IT PRACTICAL AND PLAY ON THE GUITAR""")
         countdown_mini_section(time_section)
-    if thery_level == False:
+    if theory_level == False:
         print("""Intermediate players should focus on: Building Chords, Localising the Chords Notes on the neck, Finding chord grips with more creativity, Modal Harmony
                 It's in some way pointless for me to explain everything, if you don't know what these abilities are, you should google or watch videos about them on youtube! If you know what they mean, then it's still pointless for me to give further explanation. REMEMBER TO MAKE IT PRACTICAL AND PLAY ON THE GUITAR!""")
 
