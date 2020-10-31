@@ -16,7 +16,7 @@ def main():
     TECHNIQUE(time_mini_section)
     TRANSCRIBING(time_section)
     REPERTOIRE(time_section)
-    KNOWLEDGE(time_mini_section)
+    KNOWLEDGE(time_section)
     IMPROVISATION(time_section)
 
 
@@ -89,7 +89,7 @@ def theory_level():
 def metronome():
     driver.get("https://metronom.us/en/")
     python_button = driver.find_elements_by_xpath("//*[@id='start-stop']")[0]
-    python_button.click()
+    #python_button.click()
     #create_and_switchTab()
 
 #def create_and_switchTab():
@@ -152,10 +152,11 @@ def KNOWLEDGE(time_section):
     if theory_level == True:
         print("""Beginners should focus on Basic Rhythm, Musical time signatures, Localising notes on the neck, Intervals between notes
                 It's in some way pointless for me to explain everything, if you don't know what these abilities are, you should google or watch videos about them on youtube! If you know what they mean, then it's still pointless for me to give further explanation REMEMBER TO MAKE IT PRACTICAL AND PLAY ON THE GUITAR""")
-        countdown_mini_section(time_section)
+        countdown_section(time_section)
     if theory_level == False:
         print("""Intermediate players should focus on: Building Chords, Localising the Chords Notes on the neck, Finding chord grips with more creativity, Modal Harmony
                 It's in some way pointless for me to explain everything, if you don't know what these abilities are, you should google or watch videos about them on youtube! If you know what they mean, then it's still pointless for me to give further explanation. REMEMBER TO MAKE IT PRACTICAL AND PLAY ON THE GUITAR!""")
+        countdown_section(time_section)
 
 def IMPROVISATION(time_section):
     if wants_improvisation == True:
@@ -163,6 +164,5 @@ def IMPROVISATION(time_section):
         countdown_section(time_section)
     else:
          return 0
-
 
 main()
