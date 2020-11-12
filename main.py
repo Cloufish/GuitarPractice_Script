@@ -133,6 +133,7 @@ def TRANSCRIBING(time_section):
     print("TRANSCRIBING section")
     print("Download songs that you want to transcribe and put them into the software called 'transcribe'!")
     os.system('sonic-visualiser &')
+    os.system('musescore &')
     countdown_section(time_section)
 
 def  REPERTOIRE(time_section):
