@@ -13,9 +13,9 @@ def main():
     time_mini_section = calculate_time_mini_section(time_section)
     time_theory_section = time_total / 2
     metronome()
-    #TECHNIQUE(time_mini_section)
-    #TRANSCRIBING(time_section)
-    #REPERTOIRE(time_section)
+    TECHNIQUE(time_mini_section)
+    TRANSCRIBING(time_section)
+    REPERTOIRE(time_section)
     KNOWLEDGE(time_section)
     IMPROVISATION(time_section)
 
