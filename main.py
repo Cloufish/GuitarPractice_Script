@@ -13,9 +13,9 @@ def main():
     time_mini_section = calculate_time_mini_section(time_section)
     time_theory_section = time_total / 2
     metronome()
-    TECHNIQUE(time_mini_section)
-    TRANSCRIBING(time_section)
-    REPERTOIRE(time_section)
+    #TECHNIQUE(time_mini_section)
+    #TRANSCRIBING(time_section)
+    #REPERTOIRE(time_section)
     KNOWLEDGE(time_section)
     IMPROVISATION(time_section)
 
@@ -69,7 +69,7 @@ def countdown_mini_section(time_mini_section):
 def wants_improvisation():
     impro_yes_no = False
     impro_yes_no = input(
-        "Do you want to include improvisation in this routine? [true/False]")
+        "Do you want to include improvisation in this routine? [true/False]: ")
     if impro_yes_no.strip().upper().startswith('T'):
         return True
     elif impro_yes_no.strip().upper().startswith('F'):
@@ -81,7 +81,7 @@ def wants_improvisation():
 def theory_level():
     theory_level_int = 1
     theory_level_int = int(
-        input("""What is your level in theory knowledge from 1 to 10?(default - '1'"""))
+        input("""What is your level in theory knowledge from 1 to 10?(default - '1'): """))
     if theory_level_int <= 5:
         return True
     elif theory_level_int >= 5:
@@ -119,7 +119,7 @@ def TECHNIQUE(time_mini_section):
     print("You must remember that there are 3 systems of playing Scales: CAGED System, 3 notes per string,  ")
     print("Choose the difficult level: ")
     scale_difficulty = input(
-        "Do you want Beginner or Intermediate scales? [B/I]")
+        "Do you want Beginner or Intermediate scales? [B/I]: ")
     if scale_difficulty.strip().upper().startswith("B"):
         print("BEGINNER:")
         print("https://musiciantuts.com/learning-guitar-scales/#Minor_Pentatonic")
@@ -169,69 +169,70 @@ def KNOWLEDGE(time_section):
         time_mini_theory_section = time_section/2
         
         chosen_theory_segment = int(
-            input("Choose the first theory practice segment by inputting 0-3"))
+            input("Choose the first theory practice segment by inputting 0-3: "))
         second_chosen_theory_segment = int(
-            input("Choose the second theory practice segment by inputting 0-3"))
+            input("Choose the second theory practice segment by inputting 0-3: "))
 
-        if chosen_theory_segment == 0:
-            print("You've chosen Basic Rhythm practice")
-            strumming_patters = [1, 2, 3, 4, 5]
-            print("We'll begin with the most basic pattern: \n")
-            print("""1 & 2 & 3 & 4 &
-                     D   D   D   D""")
-            print("""This might sound easy, however, you need to keep the tempo even! 
-                  I suggest you lowering the tempo, this would make this exercise more challenging and productive! Doing it slowly and accurate!
-                  And another tip: YOU NEED to keep the up and down hand motion going non-stop!""")
-            countdown_section(time_mini_theory_section/3)
-            for i in range(0,2):
-                random_strumming_patterns = random.choice(strumming_patters) 
-                strumming_patters = [2, 3, 4, 5]
-                if random_strumming_patterns == 2:
-                    print("Time for Upstrokes strumming on 'AND', so we're strumming up additionaly! ")
-                    print("""1 & 2 & 3 & 4 &
-                             D U D U D U D U""")
-                    countdown_section(time_mini_theory_section/3)
-                    continue
-                elif random_strumming_patterns == 3:
-                    print("Time for Muted strumming on second, fourth beat or whichever you like")
-                    print("""1 & 2 & 3 & 4 &
-                             D U M U D U M U""")
-                    countdown_section(time_mini_theory_section/3)
-                    continue
-                elif random_strumming_patterns == 4:
-                    print("Resting some of the counts (not strumming them)")
-                    print("""1 & 2 & 3 & 4 &
-                             D U   U D U   U""")
-                    countdown_section(time_mini_theory_section/3)
-                    continue
-                elif random_strumming_patterns == 5:
-                    print("Resting the Downstrokes!")
-                    print("""1 & 2 & 3 & 4 &
-                             D U D U   U D U""")
-                    countdown_section(time_mini_theory_section/3)
-                    continue
+        for i in range (2):
+            if chosen_theory_segment == 0:
+                print("You've chosen Basic Rhythm practice")
+                strumming_patters = [1, 2, 3, 4, 5]
+                print("We'll begin with the most basic pattern: \n")
+                print("""1 & 2 & 3 & 4 &""")
+                print("""D   D   D   D""")
+                print("""This might sound easy, however, you need to keep the tempo even! 
+                    I suggest you lowering the tempo, this would make this exercise more challenging and productive! Doing it slowly and accurate!
+                    And another tip: YOU NEED to keep the up and down hand motion going non-stop!""")
+                countdown_section(time_mini_theory_section/3)
+                for i in range(0,2):
+                    random_strumming_patterns = random.choice(strumming_patters) 
+                    strumming_patters = [2, 3, 4, 5]
+                    if random_strumming_patterns == 2:
+                        print("Time for Upstrokes strumming on 'AND', so we're strumming up additionaly! ")
+                        print("""1 & 2 & 3 & 4 &""")
+                        print("""D U D U D U D U""")
+                        countdown_section(time_mini_theory_section/3)
+                        continue
+                    elif random_strumming_patterns == 3:
+                        print("Time for Muted strumming on second, fourth beat or whichever you like")
+                        print("""1 & 2 & 3 & 4 &""")
+                        print("""D U M U D U M U""")
+                        countdown_section(time_mini_theory_section/3)
+                        continue
+                    elif random_strumming_patterns == 4:
+                        print("Resting some of the counts (not strumming them)")
+                        print("""1 & 2 & 3 & 4 &""")
+                        print("""D U   U D U   U""")
+                        countdown_section(time_mini_theory_section/3)
+                        continue
+                    elif random_strumming_patterns == 5:
+                        print("Resting the Downstrokes!")
+                        print("""1 & 2 & 3 & 4 &""")
+                        print("""D U D U   U D U""")
+                        countdown_section(time_mini_theory_section/3)
+                        continue
 
-                    
-        elif chosen_theory_segment == 1:
-                print ("You've chosen Musical time signatures")
+                        
+            elif chosen_theory_segment == 1:
+                print("You've chosen Musical time signatures")
                 
-                print ("If you don't know what musical time signatures are, google this out and get familiar https://duckduckgo.com/?q=Musical+time+signatures+guitar+how+to+exercise&ia=web")
-                print ("Essentially, different style use different time signatures, for example most western/pop music uses 4/4 signatures\n")            
+                print("If you don't know what musical time signatures are, google this out and get familiar https://duckduckgo.com/?q=Musical+time+signatures+guitar+how+to+exercise&ia=web")
+                print("Essentially, different style use different time signatures, for example most western/pop music uses 4/4 signatures\n")            
                 print("[0] Simple Time")
                 print("[1] Compound Time")
                 print("[2] Irregular Time")
 
         
-                chosen_time_signature_type = int(input("Choose the time signature type you want to practice by inputting 0-3")) 
+                chosen_time_signature_type = int(input("Choose the time signature type you want to practice by inputting 0-3: ")) 
                 if chosen_time_signature_type == 0:
                     for i in range(0,3):
                         time_signatures=["4/4","3/4","2/4","2/2","2/1"]
                         random_time_signature = random.choice(time_signatures)
                         print("Time for -->" + random_time_signature + "<-- time signature")
-                     
+                    
                         countdown_section(time_mini_theory_section/3) 
                 
-                if chosen_theory_segment == 2:
+                if chosen_theory_segment == 1:
                     for i in range(0,3):
                         time_signatures=["6/8","9/8","12/8"]
                         random_time_signature = random.choice(time_signatures)
@@ -244,35 +245,33 @@ def KNOWLEDGE(time_section):
                         time_signatures=["5/8","7/8"]
                         random_time_signature = random.choice(time_signatures)
                         print("Time for -->" + random_time_signature + "<-- time signature")
-                         
+                        
                         countdown_section(time_mini_theory_section/3)
-        elif chosen_theory_segment == 2:
-            print("You've chosen Localising notes on the neck")
-            all_notes=["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
-            time_localising_notes=25
-            start_time = time.time()
-            lv = 0
-            while True:
-                if lv == 5:
-                    if time.time() >= time_mini_theory_section:
+            elif chosen_theory_segment == 2:
+                print("You've chosen Localising notes on the neck")
+                all_notes=["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+                time_localising_notes=25
+                total_lvs= float(time_mini_theory_section/25)
+                lv = 0
+                while True:
+                    if lv >= total_lvs:
                         break
                     else:
                         os.system('cls' if os.name == 'nt' else 'clear')
                         random_note = random.choice(all_notes)
                         print(random_note)
                         countdown_section(time_localising_notes)
-                        lv = 0
                         lv+=1
-            
-        elif chosen_theory_segment == 3:
-            print("You've chosen Intervals between notes")
-            all_notes=["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
-            intervals_possible=["minor 2nd","Major 2nd","minor 3rd","Major 3rd","Perfect 4th","tritone","Perfect 5th","minor 6th","Major 6th","minor 7th / dominant 7th","major 7th","octave"]
-            time_intervals = 25
-            lv = 0
-            while True:
-                if lv == 5:
-                    if time.time() >= time_mini_theory_section:
+                
+            elif chosen_theory_segment == 3:
+                print("You've chosen Intervals between notes")
+                all_notes=["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+                intervals_possible=["minor 2nd","Major 2nd","minor 3rd","Major 3rd","Perfect 4th","tritone","Perfect 5th","minor 6th","Major 6th","minor 7th / dominant 7th","major 7th","octave"]
+                time_intervals = 25
+                total_lvs= float(time_mini_theory_section/25)
+                lv = 0
+                while True:
+                    if lv >= total_lvs:
                         break
                     else:
                         os.system('cls' if os.name == 'nt' else 'clear')
@@ -280,16 +279,12 @@ def KNOWLEDGE(time_section):
                         random_note = random.choice(all_notes)
                         print(random_note + ": " + random_interval)
                         countdown_section(time_intervals)
-                        lv = 0
                         lv+=1
-            
+            chosen_theory_segment=second_chosen_theory_segment
         else:
             "You didn't supplied valid number/value"
         
-
-        # print("""Beginners should focus on Basic Rhythm, Musical time signatures, Localising notes on the neck, Intervals between notes
-        #        It's in some way pointless for me to explain everything, if you don't know what these abilities are, you should google or watch videos about them on youtube! If you know what they mean, then it's still pointless for me to give further explanation REMEMBER TO MAKE IT PRACTICAL AND PLAY ON THE GUITAR""")
-            countdown_section(time_section)
+        
     if theory_level == False:
         print("[0] Building Chords")
         print("[1] Localising the Chords on the neck")
