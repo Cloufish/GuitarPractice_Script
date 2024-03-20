@@ -134,13 +134,12 @@ def TECHNIQUE(time_technique):
     }
 
     random_other_technique, technique_explanation = random.choice(list(other_techniques.items()))
-
-    print_and_sleep("Let's do " + bold_text(random_other_technique) + ". " + technique_explanation + "\n")
+    print_and_sleep("Let's do " + bold_text(random_other_technique) + ".\n " + technique_explanation + "\n")
 
     timer.countdown_section(time_mini_section) 
 
-    random_other_technique = random.choice(other_techniques)
-    print_and_sleep("Let's do " + bold_text(random_other_technique) + " \n")
+    random_other_technique, technique_explanation = random.choice(list(other_techniques.items()))
+    print_and_sleep("Let's do " + bold_text(random_other_technique) + ".\n " + technique_explanation + "\n")
     
     timer.countdown_section(time_mini_section) 
 
