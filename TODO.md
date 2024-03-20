@@ -1,7 +1,6 @@
 # TODO
 
 ## CORE COMPONETS TO GET WORKING:
-[] Setting up a timer with 15  minutes for each practice segment (or making it so that )
 []. Getting metronome to work constantly - except transcribing
 []. Deciding of which software/libraries to use in each segment
 [] Setting Knowledge section to be more in depth
