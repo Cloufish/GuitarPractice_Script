@@ -2,6 +2,7 @@ import random
 from enum import Enum
 import timer
 import time
+import os
 
 class TheoryLevel(Enum):
     BASIC = 1

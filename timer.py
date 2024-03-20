@@ -18,7 +18,7 @@ def countdown_section(time_section, break_length=60, end_message="Time's up! Nex
     except KeyboardInterrupt:
         print("\nInterrupted! Moving to the next section...")
     finally:
-        Thread(target=lambda: playsound(sound_break_file)).start()
+        playsound(sound_break_file)
         print("\n" + end_message)
 
     # Start the break countdown
@@ -35,5 +35,5 @@ def countdown_section(time_section, break_length=60, end_message="Time's up! Nex
     except KeyboardInterrupt:
         print("\nBreak interrupted! Moving to the next section...")
     finally:
-        Thread(target=lambda: playsound(sound_work_file)).start()
+        playsound(sound_work_file)
         print("\nBreak's over!")
